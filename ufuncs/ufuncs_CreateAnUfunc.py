@@ -8,3 +8,6 @@ func = np.frompyfunc(myadd, 2, 1) #without this line, the result below would be 
 print(func([1, 2, 3, 4], [5, 6, 7, 8])) #ufuncs perform element-wise operations, i.e in this case
 #addition on single elements
 #*note: 2 arrays must have the same size and the same data type
+
+print(type(func)==np.ufunc) #check if a function is a ufunc
+print(type(np.add)==np.ufunc)
